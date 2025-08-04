@@ -6,7 +6,6 @@ canvas.height = 400;
 let gravity = 1;
 let speedMultiplier = 1;
 let frame = 0;
-let powerCooldown = 0;
 let playerHistory = [];
 
 const player = {
@@ -125,4 +124,3 @@ document.addEventListener("keydown", (e) => {
 });
 
 requestAnimationFrame(gameLoop);
-```
