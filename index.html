@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chrono Dash: Time Twister</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <canvas id="gameCanvas"></canvas>
-  <div class="instructions">
+  <div class="menu" id="menu">
+    <h1>Chrono Dash: Time Twister</h1>
+    <button id="startBtn">Start Game</button>
+  </div>
+  <canvas id="gameCanvas" style="display:none"></canvas>
+  <div class="instructions" style="display:none" id="instructions">
     <p><strong>Controls:</strong> SPACE = Jump | S = Slow Time | R = Reverse</p>
     <p>🟢 Orbs recharge your powers!</p>
   </div>
+  <div class="hud" style="display:none" id="hud">
+    <div>Score: <span id="score">0</span></div>
+    <div>
+      Slow Power:
+      <div class="power-bar-bg"><div id="slowPowerBar" class="power-bar-fill"></div></div>
+    </div>
+    <div>
+      Reverse Power:
+      <div class="power-bar-bg"><div id="reversePowerBar" class="power-bar-fill"></div></div>
+    </div>
+  </div>
+  <div class="menu" id="gameOverMenu" style="display:none">
+    <h2>Game Over!</h2>
+    <p>Your Score: <span id="finalScore">0</span></p>
+    <button id="restartBtn">Restart</button>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
